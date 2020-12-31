@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>Sogno una Vacanza</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	 
+	<link rel="manifest" href="/manifest.json">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    
+
+    <link rel="stylesheet" href="css/aos.css">
+
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="center">
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Sogno una<img src="images/pwa-logo-50x50.png" alt="" width="40px">Vacanza<span>Agenzia Viaggi</span></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="chisiamo.html" class="nav-link">Chi Siamo</a></li>
+	          <li class="nav-item"><a href="destinazioni.html" class="nav-link">Destinazioni</a></li>
+	          <li class="nav-item"><a href="contatti.html" class="nav-link">Contatti</a></li>
+	         <li class="nav-item cta">
+				  
+				  
+				  <a data-toggle="modal" data-target="#prenota" class="nav-link">Prenota Ora</a></li>
+			  <li class="nav-item">
+				  <div class="non-desktop-view">
+					  <a href="tel:+390123456789" class="icon-button phone"><i class="icon-phone"></i><span></span></a>
+<a href="mailto:info@sognounavacanza.com" class="icon-button mail"><i class="icon-envelope"></i><span></span></a>	   
+<a href="https://www.facebook.com/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+<a href="https://www.instagram.com/" class="icon-button instagram"><i class="icon-instagram"></i><span></span></a>
+<a href="https://www.twitter.com/" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></div></li>
+				
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+	  
+	   <div id="prenota" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <div class="modal-content bg-light">
+            <div class="modal-header">
+				<div class="modal-title"><h5 style=" color: #f9ab30;">Il nostro esperto ti contatterà in 48 ore</h5></div>
+                <button type="button" class="close" data-dismiss="modal"> &times;</button>
+                
+            </div>
+			
+			<form class="modulo" method="get" action="modal.php">
+			
+            <div class="modal-body">
+				<p>Informazioni di contatto</p>
+              
+				<div class="form-group">
+                <input type="text" class="form-control" name="nome" placeholder="Nome *" required>
+				</div>
+				<div class="form-group">
+                <input type="text" class="form-control" name="cognome" placeholder="Cognome *" required>
+              </div>
+				 
+				  
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Email *" required>
+              </div>
+				 <div class="form-group">
+                <input type="tel" class="form-control" name="cellulare" placeholder="Cellulare ">
+              </div>
+				
+				<p>Vuoi aggiungere alcuni dati per aiutarci a darti informaizioni più precise?</p>
+               <div class="form-group">
+                <input type="text" class="form-control" name="partenza" placeholder="Da dove vuoi partire? *" required>
+              </div>
+				<div class="form-group">
+                <input type="text" class="form-control" name="arrivo" placeholder="Dove vuoi andare? *" required>
+              </div>
+				
+				<div class="form-group">
+					
+                <input type="text" class="form-control" autocomplete="off" name="data_partenza" placeholder="Quando vorresti partire? *" onfocus="(this.type='date')"  required>
+              </div>
+				
+					<div class="form-group">
+                <input type="number" class="form-control" name="persone" placeholder="Quanti partecipanti? *" required>
+              </div>
+			
+				
+              <div class="form-group">
+                <textarea name="messaggio" id="" cols="50" rows="5" class="form-control" placeholder="Vuoi aggiungere altre note? " ></textarea>
+              </div>
+				
+				
+				<div class="form-group"><p style="color: crimson;">* Campi obbligatori</p></div>
+				
+				<div class="form-group">
+				<input name="checkbox" type="checkbox" required="required" id="checkbox">
+        L’utente autorizza Sogno una Vacanza al trattamento dei dati personali in conformità con la normativa vigente (UE 2016/679 GDPR/16) 
+				</div>
+				
+              <div class="form-group">
+                <input type="submit" name="submit" value="Invia Richiesta" class="btn btn-primary py-3 px-5">
+              </div>
+				<div class="alert alert-success modal_msg" style="display: none" role="alert"></div>
+                       <p>Oppure Contattaci</p>
+                    
+                 <div class="form-group"> <a href="tel:+390123456789" class="icon-button phone"><i class="icon-phone"></i><span></span></a>
+<a href="mailto:info@sognounavacanza.com" class="icon-button mail"><i class="icon-envelope"></i><span></span></a>	   
+<a href="https://www.facebook.com/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+<a href="https://www.instagram.com/" class="icon-button instagram"><i class="icon-instagram"></i><span></span></a>
+<a href="https://www.twitter.com/" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></div>
+             
+            </div>
+
+            <div class="modal-footer">
+				
+				<button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Annulla</button> 
+                
+            </div>
+			
+				</form>
+			
+        </div>
+		  </div>
+	  </div>
+	  
+	  
+    
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background: linear-gradient(90deg, rgba(51,49,59,1) 60%, rgba(0,0,0,1) 100%);" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+		 <div class="desktop-view col-md-12"> 
+<a href="tel:+390123456789" class="icon-button phone"><i class="icon-phone"></i><span></span></a>
+<a href="mailto:info@sognounavacanza.com" class="icon-button mail"><i class="icon-envelope"></i><span></span></a>	   
+<a href="https://www.facebook.com/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+<a href="https://www.instagram.com/" class="icon-button instagram"><i class="icon-instagram"></i><span></span></a>
+<a href="https://www.twitter.com/" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+	   </div>
+		
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Medio Oriente</h1>
+			  <p>Splendide catene montuose, bellezze naturali incontaminate, acque tiepide e una storia tra le più antiche al modo, lo rendono un luogo perfetto da visitare.</p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="icon-arrow-right"></i></a></span> <span><a href="destinazioni.html">Destinazioni <i class="icon-arrow-right"></i></a></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="ftco-section ftco-no-pt bg-light">
+    	
+		<div class="container" >
+			<div><br></div>
+        <div class="row">
+        	
+        		<div class="col-md-4 ftco-animate">
+        		<div class="project-wrap">
+        			<a href="#" class="img" style="background-image: url(images/destination-4.jpg);"></a>
+        			<div class="text p-4">
+        				<span class="price">€710/persona</span>
+        				<span class="days">4 giorni</span>
+        				<h3><a href="#">Tramonti a Cappadoccia -09/10-</a></h3>
+        				<p class="location"><span class="ion-ios-map"></span> Cappadoccia, Turchia</p>
+   
+        			</div>
+        		</div>
+        	</div>
+			
+			<div class="col-md-4 ftco-animate">
+        		<div class="project-wrap">
+       			  <a href="#" class="img" style="background-image: url(images/destination-9.jpg);"></a>
+        			<div class="text p-4">
+        				<span class="price">€950/persona</span>
+        				<span class="days">5 giorni</span>
+        				<h3><a href="#">Tour fotografici: Abu Dhabi e Dubai -21/10-</a></h3>
+        				<p class="location"><span class="ion-ios-map"></span> Abu Dhabi, Dubai, Emirati Arabi Uniti</p>
+   
+        			</div>
+        		</div>
+        	</div>
+			
+        </div>
+		
+    	</div>
+    </section>
+	  
+	
+
+
+    <footer class="ftco-footer bg-bottom" style="background-image: url(images/footer-bg.jpg);">
+		<button onclick="topFunction()" id="myBtn" title="Go to top"><span class="icon-chevron-circle-up"></span></button>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+             <h2 class="ftco-heading-2">Sogno una<img src="images/pwa-logo-50x50.png" alt="" width="40px">Vacanza</h2>
+              <p>Sogno una Vacanza è una delle migliori agenzie di viaggi in Italia. Lavoriamo ogni giorno per proporti programmi di viaggio originali e per selezionare le vacanze più vantaggiose al giusto prezzo. </p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                  <li class="ftco-animate"><a href="https://www.twitter.com/"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Informazioni</h2>
+              <ul class="list-unstyled">
+			    <li><a href="#" class="py-2 d-block">Richiedi preventivo</a></li>
+                <li><a href="images/Condizioni generali.pdf" class="py-2 d-block">Condizioni generali di vendita</a></li>
+                <li><a href="privacy-policy.html" class="py-2 d-block">Privacy Policy</a></li>
+                <li><a href="cookie-policy.html" class="py-2 d-block">Cookie Policy</a></li>
+                <li><a href="images/Informativa e consenso.pdf" class="py-2 d-block">Informativa e consenso</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Tour</h2>
+              <ul class="list-unstyled">
+                <li><a href="europa.html" class="py-2 d-block">Europa</a></li>
+                <li><a href="africa.html" class="py-2 d-block">Africa</a></li>
+                <li><a href="nord_america.html" class="py-2 d-block">Nord America</a></li>
+                <li><a href="centro_america_caraibi.html" class="py-2 d-block">Centro America e Caraibi</a></li>
+                <li><a href="medio_oriente.html" class="py-2 d-block">Medio Oriente</a></li>
+                <li><a href="estremo_oriente.html" class="py-2 d-block">Estremo Oriente</a></li>
+				 <li><a href="oceania.html" class="py-2 d-block">Oceania</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Hai bisogno di altre informazioni?</h2>
+            	<div class="block-23 mb-3">
+	               <ul>
+	                <li><a href="#"><span class="icon icon-map-marker"></span><span class="text">Via Dei Sogni, 10 - 00110 Roma</span></a></li>
+	                  <li><a href="tel:+390123456789"><span class="icon icon-phone"></span><span class="text">+39 012 345 6789</span></a></li>
+	                <li><a href="mailto:info@sognounavacanza.com"><span class="icon icon-envelope"></span><span class="text"> info@sognounavacanza.com</span></a></li>
+	              </ul>
+	            </div>
+				<h2 class="ftco-heading-2">ORARI DI APERTURA</h2>
+<p>Dal Lunedì al Venerdì:
+09:00 - 12:00 e 16:00 - 19:30. <br>
+Il Sabato e per altri orari solo su appuntamento.<br>
+Domenica chiuso.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Sogno una Vacanza <i class="icon-heart color-danger" aria-hidden="true"></i>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+ 
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
+	  
+
+	  
+	  
+	   <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 30px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+	  
+	  
+	  <!--MODAL-->
+	  
+ <script>
+		  (function ($) {
+    'use strict';
+
+    var form = $('.modulo'),
+        message = $('.modal_msg'),
+        form_data;
+
+    // Success function
+    function done_func(response) {
+        message.fadeIn().removeClass('alert-danger').addClass('alert-success');
+        message.text(response);
+        setTimeout(function () {
+            message.fadeOut();
+        }, 9000);
+        form.find('input:not([type="submit"]), textarea').val('');
+    }
+
+    // fail function
+    function fail_func(data) {
+         message.fadeIn().removeClass('alert-success').addClass('alert-danger');
+        message.text("Hai perso la connessione ad Internet. Riprova più tardi!");
+        setTimeout(function () {
+            message.fadeOut();
+        }, 7000);
+    }
+    
+    form.submit(function (e) {
+        e.preventDefault();
+        form_data = $(this).serialize();
+        $.ajax({
+            type: 'GET',
+            url: form.attr('action'),
+            data: form_data
+        })
+		.fail(fail_func)
+        .done(done_func);
+       
+    });
+    
+})(jQuery);</script>  
+	  
+	  <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","corners":"small","colors":{"popup":{"background":"#33313b","text":"#ffffff","border":"#33313b"},"button":{"background":"#f9ab30","text":"#000000"}},"position":"bottom","fontsize":"tiny","content":{"href":"https://www.sognounavacanza.com/cookie-policy.html","button":"Chiudi","link":"Maggiori informazioni","message":"Questo sito utilizza cookie per migliorare l'esperienza dell'utente e la qualità dei servizi. Continuando la navigazione autorizzi le nostre modalità d'uso dei cookie. "}})});</script>
+    
+  </body>
+</html>

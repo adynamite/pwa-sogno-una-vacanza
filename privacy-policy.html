@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>Sogno una Vacanza</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   
+
+    <link rel="stylesheet" href="css/aos.css">
+
+ 
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="center">
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Sogno una<img src="images/pwa-logo-50x50.png" alt="" width="40px">Vacanza<span>Agenzia Viaggi</span></a> 
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="chisiamo.html" class="nav-link">Chi Siamo</a></li>
+	          <li class="nav-item"><a href="destinazioni.html" class="nav-link">Destinazioni</a></li>
+	          <li class="nav-item"><a href="contatti.html" class="nav-link">Contatti</a></li>
+	          <li class="nav-item cta">
+				  
+				  
+				  <a data-toggle="modal" data-target="#prenota" class="nav-link">Prenota Ora</a></li>
+			  <li class="nav-item">
+				  <div class="non-desktop-view">
+					  <a href="tel:+390123456789" class="icon-button phone"><i class="icon-phone"></i><span></span></a>
+<a href="mailto:info@sognounavacanza.com" class="icon-button mail"><i class="icon-envelope"></i><span></span></a>	   
+<a href="https://www.facebook.com/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+<a href="https://www.instagram.com/" class="icon-button instagram"><i class="icon-instagram"></i><span></span></a>
+<a href="https://www.twitter.com/" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></div></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+	  
+	  <div id="prenota" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <div class="modal-content bg-light">
+            <div class="modal-header">
+				<div class="modal-title"><h5 style=" color: #f9ab30;">Il nostro esperto ti contatterà in 48 ore</h5></div>
+                <button type="button" class="close" data-dismiss="modal"> &times;</button>
+                
+            </div>
+			
+			<form class="modulo" method="get" action="modal.php">
+			
+            <div class="modal-body">
+				<p>Informazioni di contatto</p>
+              
+				<div class="form-group">
+                <input type="text" class="form-control" name="nome" placeholder="Nome *" required>
+				</div>
+				<div class="form-group">
+                <input type="text" class="form-control" name="cognome" placeholder="Cognome *" required>
+              </div>
+				 
+				  
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Email *" required>
+              </div>
+				 <div class="form-group">
+                <input type="tel" class="form-control" name="cellulare" placeholder="Cellulare ">
+              </div>
+				
+				<p>Vuoi aggiungere alcuni dati per aiutarci a darti informaizioni più precise?</p>
+               <div class="form-group">
+                <input type="text" class="form-control" name="partenza" placeholder="Da dove vuoi partire? *" required>
+              </div>
+				<div class="form-group">
+                <input type="text" class="form-control" name="arrivo" placeholder="Dove vuoi andare? *" required>
+              </div>
+				
+				<div class="form-group">
+					
+                <input type="text" class="form-control" autocomplete="off" name="data_partenza" placeholder="Quando vorresti partire? *" onfocus="(this.type='date')"  required>
+              </div>
+				
+					<div class="form-group">
+                <input type="number" class="form-control" name="persone" placeholder="Quanti partecipanti? *" required>
+              </div>
+			
+				
+              <div class="form-group">
+                <textarea name="messaggio" id="" cols="50" rows="5" class="form-control" placeholder="Vuoi aggiungere altre note? " ></textarea>
+              </div>
+				
+				
+				<div class="form-group"><p style="color: crimson;">* Campi obbligatori</p></div>
+				
+				<div class="form-group">
+				<input name="checkbox" type="checkbox" required="required" id="checkbox">
+        L’utente autorizza Sogno una Vacanza al trattamento dei dati personali in conformità con la normativa vigente (UE 2016/679 GDPR/16) 
+				</div>
+				
+              <div class="form-group">
+                <input type="submit" name="submit" value="Invia Richiesta" class="btn btn-primary py-3 px-5">
+              </div>
+				<div class="alert alert-success modal_msg" style="display: none" role="alert"></div>
+                       <p>Oppure Contattaci</p>
+                    
+                 <div class="form-group"> <a href="tel:+390123456789" class="icon-button phone"><i class="icon-phone"></i><span></span></a>
+<a href="mailto:info@sognounavacanza.com" class="icon-button mail"><i class="icon-envelope"></i><span></span></a>	   
+<a href="https://www.facebook.com/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+<a href="https://www.instagram.com/" class="icon-button instagram"><i class="icon-instagram"></i><span></span></a>
+<a href="https://www.twitter.com/" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a></div>
+             
+            </div>
+
+            <div class="modal-footer">
+				
+				<button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Annulla</button> 
+                
+            </div>
+			
+				</form>
+			
+        </div>
+		  </div>
+	  </div>
+	  
+	  
+	  
+    
+    <section class="hero-wrap js-fullheight" style="background: linear-gradient(90deg, rgba(51,49,59,1) 60%, rgba(0,0,0,1) 100%);" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+		   <div class="desktop-view col-md-12"> 
+<a href="tel:+390123456789" class="icon-button phone"><i class="icon-phone"></i><span></span></a>
+<a href="mailto:info@sognounavacanza.com" class="icon-button mail"><i class="icon-envelope"></i><span></span></a>	   
+<a href="https://www.facebook.com/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+<a href="https://www.instagram.com/" class="icon-button instagram"><i class="icon-instagram"></i><span></span></a>
+<a href="https://www.twitter.com/" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+	   </div>
+		
+		
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Privacy Policy</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="icon-arrow-right"></i></a></span> <span><a href="privacy-policy.html">Privacy Policy <i class="icon-arrow-right"></i></a></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section class="ftco-section bg-light ">
+		<div class="container">
+		<div class="row d-flex">
+			<div class="col-md-12">
+			<p style="color: #f9ab30;">Informativa fornita da Sogno una Vacanza ai sensi e per gli effetti dell’art. 13 Reg. UE 679/2016 in relazione al sito www.sognounavacanza.com</p>
+ 
+				<h2>Informativa sintetica</h2>
+
+				<p>Gent.le Visitatore,<br><br>
+					
+				lo scopo dell'informativa privacy è di fornire la massima trasparenza relativamente alle informazioni che il sito raccoglie e come le usa.In ottemperanza degli obblighi derivanti dalla normativa nazionale (D. Lgs 30 giugno 2003 n. 196, Codice in materia di protezione dei dati personali, e successive modifiche) ed europea (Regolamento europeo per la protezione dei dati personali n. 679/2016, GDPR), Sogno una Vacanza, ha predisposto ed aggiorna il presente sito e questa informativa in modo da rispettare e tutelare la riservatezza dei visitatori e degli utenti, ponendo in essere ogni sforzo possibile e proporzionato per non ledere i diritti degli utenti. Il titolare del trattamento non ha nominato un Responsabile della protezione dei dati. <br><br>
+
+				Il presente sito può pubblicare annunci pubblicitari, e può utilizzare i dati di navigazione a fini di marketing, anche attraverso servizi di terze parti. Se si desidera avere maggiori informazioni in ordine a come vengono trattati i dati di navigazione, La invitiamo a consultare la nostra cookie policy. <br>
+					
+				Il presente sito pone in essere ogni sforzo possibile per tutelare la privacy degli utenti e minimizzare la raccolta dei dati personali. Ad esempio, i trattamenti dei dati sono stati impostati in modo da consentire all’utente di scegliere se ed in che misura trasmettere i propri dati personali, approntando specifiche informative ove il sito prevede la possibilità di compilare moduli di contatto ad esempio, per perfezionare gli acquisti dei nostri servizi o per iscriversi alla nostra newsletter. I dati trasmessi volontariamente dall’utente potrebbero essere comunicati, a seconda della finalità del trattamento, a società terze che forniscono servizi di viaggio, a società che offrono servizi di gestione della newsletter o che prestano attività di assistenza per la gestione e manutenzione del presente sito. In ogni caso, i Suoi dati non saranno oggetto di diffusione.<br><br>
+
+				A titolo informativo, rinviando alla nostra cookie policy per ogni ulteriore dettaglio, si precisa che la gestione dei cookie è complicata, sia da parte del gestore del sito (che potrebbe non riuscire a gestire correttamente i cookie di terze parti) che da parte dell'utente (che potrebbe bloccare cookie essenziali per il funzionamento del sito). Per cui un modo migliore, e più semplice, per tutelare la privacy sta nell'utilizzo di strumenti anti-traccianti, che bloccano quindi il tracciamento da parte dei siti. <br>
+
+ 				In qualsiasi momento potrà liberamente esercitare i Suoi diritti in relazione ai dati personali, ossia chiedere l’accesso ai dati personali e la rettifica o la cancellazione degli stessi o la limitazione del trattamento dei dati che La riguardano o di opporsi al loro trattamento, oltre al diritto alla portabilità. Il testo completo in ordine ai diritti indicati (artt. 15-22 e 34 Reg. 679/16 UE) è disponibile in calce alla presente informativa. Per esercitare tali diritti, La inviamo a contattarci all’indirizzo privacy@sognounavacanza.com La tutela dei Suoi dati è per noi importante, ma se non Si ritenesse soddisfatto, Le ricordiamo che ha il diritto di presentare reclamo al Garante per la Protezione del Dati Personali.<br><br>  
+				Se desidera maggiori dettagli in ordine al trattamento dei dati personali, la invitiamo a consultare l’informativa dettagliata che trova di seguito. </p>
+			 
+ 
+ 
+
+				<h2>Informativa estesa </h2>
+
+
+				<h5>1. PREMESSA</h5>
+				<p>In osservanza al Reg. UE 679/2016, con la presente, forniamo le dovute informazioni in ordine alle finalità e modalità del trattamento dei dati personali a coloro che consultano le pagine del sito web di Sogno una Vacanza (www.sognounavacanza.com), in qualità di titolare del trattamento dei dati.
+				La presente informativa è da considerarsi valida solo per il presente sito web (www.sognounavacanza.com) e, non per altri siti web eventualmente consultabili tramite links pubblicati sul presente sito; su tali siti terzi, il titolare del trattamento non è da considerarsi in alcun modo responsabile.</p>
+
+
+				<h5>2. IDENTITÀ E DATI DI CONTATTO DEL TITOLARE DEL TRATTAMENTO</h5>
+				
+				<p>Sogno una vacanza. <br>
+				sede legale: Via Dei Sogni n. 10, Roma <br>
+					P.I. – C.F. n. 078908765<br>
+					PEC: amministrazione@pec.sognounavacanza.com<br>
+					Email per le richieste aventi ad oggetto il trattamento dei dati personali e l’esercizio dei diritti connessi agli stessi: privacy@sognounavacanza.com</p>
+
+			<h5>3. TIPI DI DATI TRATTATI:</h5>Dati di navigazione<br>
+				
+<p>Relativamente ai soli aspetti di natura tecnica e protocolli, desideriamo informare che: <br>
+•    I sistemi informatici e le procedure software preposte al funzionamento di questo sito web possono acquisire, nel corso del loro normale esercizio, alcuni dati personali la cui trasmissione è implicita nell'uso dei protocolli di comunicazione di Internet.<br>
+•    Si tratta di informazioni che non sono raccolte per essere associate a interessati identificati, ma che per loro stessa natura potrebbero, attraverso elaborazioni ed associazioni con dati detenuti da terzi, permettere di identificare gli Utenti.<br>
+•    In questa categoria di dati rientrano gli indirizzi IP o i nomi a dominio dei computer utilizzati dagli Utenti che si connettono al sito, gli indirizzi in notazione URI (Uniform Resource Identifier) delle risorse richieste, l'orario della richiesta, il metodo utilizzato nel sottoporre la richiesta al server, la dimensione del file ottenuto in risposta, il codice numerico indicante lo stato della risposta data dal server (buon fine, errore, ecc.) ed altri parametri relativi al sistema operativo e all'ambiente informatico dell'Utente. <br>
+•    Questi dati possono essere utilizzati per l'accertamento di eventuali responsabilità, in caso di ipotetici reati informatici ai danni del sito.<br></p>
+
+<h5>4. COOKIES </h5>
+<p>I cookie sono piccoli file di testo che vengono inviati dal sito web visitato sul dispositivo dell’Utente (solitamente al browser), dove vengono memorizzati in modo da poter riconoscere tale dispositivo alla successiva visita. Ad ogni visita successiva, infatti, i cookie sono re inviati al sito dal dispositivo dell’Utente.<br>
+Ciascun cookie contiene generalmente: il nome del server da cui il cookie è stato inviato, la scadenza ed un valore, solitamente un numero unico generato a caso dal computer. Il server del sito web che trasferisce il cookie utilizza questo numero per riconoscere l’Utente quando torna a visitare un sito o naviga da una pagina all’altra.<br>
+I cookie possono essere installati non solo dallo stesso gestore del sito visitato dall’utente (cookie di prima parte), ma anche da un sito diverso che installa cookie per il tramite del primo sito (cookie di terze parti) ed è in grado di riconoscerli. Questo accade perché sul sito visitato possono essere presenti elementi (immagini, mappe, suoni, link a pagine web di altri domini, etc) che risiedono su server diversi da quello del sito visitato. Per maggiori dettagli in ordine ai cookie, La invitiamo a consultare la nostra Cookie Policy.</p>
+
+<h5>5. DATI FORNITI VOLONTARIAMENTE DALL'UTENTE.</h5>
+<p>A seguito della consultazione di questo sito possono essere trattati dati relativi a persone identificate o identificabili. In particolare, si specifica che tale trattamento può avvenire in relazione ai dati personali forniti liberamente dagli Utenti che inviano al titolare del trattamento proprie informazioni attraverso le apposite sezioni presenti sul sito web (www.sognounavacanza.com), quali, ad esempio, i recapiti e-mail, e/o compilando specifici moduli di raccolta informazioni presenti sul sito. Infatti, l'invio facoltativo, esplicito e volontario di dati personali meditante l’uso dei format messi a disposizione su questo sito ne comporta l’acquisizione ed il trattamento per le finalità specificamente indicate nelle informative disponibili in corrispondenza di ciascun format. <br>
+Specifiche informative dettagliate sul trattamento dei dati, rese ai sensi dell’art. 13 del Reg. UE 679/2016, sono riportate, di volta in volta, nelle pagine in cui sono presenti moduli per la raccolta dei dati del visitatore. Tali informative sono dirette a definire limiti, finalità e modalità del trattamento di ciascun modulo di raccolta dati e ciascun visitatore potrà esprimere liberamente il proprio consenso ed autorizzare la raccolta dei dati ed il successivo utilizzo, ferma restando la necessità di dare atto dalla presa visione dell’informativa per esigenze funzionali alla creazione di un profilo utente ovvero per il perfezionamento degli acquisti tramite il sito stesso a seconda della base giuridica sulla quale si fonda il trattamento ai sensi dell’art. 6 Reg. 679/16 UE.<br>
+Si evidenzia che, in nessuna sezione del sito, né per l’accesso ad alcuna funzionalità del sito, viene richiesto il conferimento di “categorie particolari di dati personali” e/o di “dati personali relativi a condanne penali e reati”, come definiti dall’art. 9 e 10 del Reg. Ue 679/2016 e che a tal fine il sito è stato configurato senza prevedere la possibilità di trasmissione di siffatte informazioni. Tuttavia, qualora spontaneamente l’Utente riuscisse ad inviare al titolare del trattamento informazioni del suddetto tipo, il titolare del trattamento provvederà a trattare tali dati nel rispetto della vigente normativa in materia di protezione dei dati personali (Reg. Ue 679/2016) e nei limiti di quanto strettamente necessario in relazione alle richieste manifestate dall’Utente interessato.</p>
+
+<h5>6. SICUREZZA DEI DATI</h5>
+<p>Il Titolare, tenendo conto dello state dell’arte e dei costi di attuazione nonché della natura, dell’ambito di applicazione, del contesto e delle finalità del trattamento sia al momento di determinare i mezzi del trattamento sia all’atto del trattamento stesso (c.d. analisi dei rischi - accountability), ha messo in atto misure tecniche ed organizzative adeguate, volte ad attuare in modo efficace i principi di protezione dei dati e a integrare nel trattamento le necessarie garanzie al fine di soddisfare i requisiti del Reg. UE 679/2016 e tutelare i diritti dell’interessato.<br>    
+Il trattamento dei dati avverrà mediante modalità e strumenti idonei a garantirne la sicurezza (art. 24, 25 e 32 Reg. Ue 679/2016) e sarà effettuato attraverso processo automatizzato ed attraverso mezzi non automatizzati (archivi cartacei), a cui saranno applicate tutte le misure tecniche ed organizzative atte a garantire un livello di sicurezza adeguato al rischio, così da assicurare su base permanente, la loro riservatezza, integrità, disponibilità e resilienza dei sistemi e dei servizi di trattamento (a titolo esemplificativo ma non esaustivo: controlli sia sull’assegnazione degli incarichi ai soggetti preposti al trattamento dei dati che sulla classificazione dei dati stessi; procedure, se sostenibili, di pseudonimizzazione e cifratura, meccanismi di disaster recovery, ecc. ).  </p>
+
+<h5>7. NATURA DEL CONFERIMENTO DEI DATI</h5>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quas ullam, perferendis reiciendis fugit laborum nobis tempora, officia, nisi esse veniam nesciunt consequatur! Doloremque debitis voluptatibus, velit perferendis, similique tempora.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis tortor dolor. Ut congue mi nunc, at varius nulla imperdiet et. Nullam nisi urna, tempor sit amet maximus vitae, molestie nec metus. Mauris eget leo pretium, semper nisl sit amet, dignissim lacus. Phasellus a ullamcorper leo. Pellentesque dolor diam, lacinia quis viverra a, eleifend eget lectus. Duis quis accumsan nulla, at venenatis nisl. Sed faucibus odio non varius pretium. Nulla facilisi. Aliquam faucibus, felis et ullamcorper pharetra, ex odio pulvinar nunc, at tempus felis libero ut ante. Morbi quis odio euismod, malesuada ligula scelerisque, tincidunt arcu. Suspendisse augue dolor, ullamcorper quis quam sit amet, dignissim pretium ligula. Proin aliquet diam eget felis tincidunt, nec placerat velit cursus. Nulla eget ornare est.</p>
+
+<h5>8. AMBITO DI COMUNICAZIONE E RESPONSABILI DEL TRATTAMENTO</h5>
+<p>In vitae sagittis eros. Fusce pretium aliquam diam, eget ultrices turpis vulputate id. In maximus lacus est, a imperdiet dolor hendrerit sed. Duis eu fringilla sem. Praesent molestie sem quis sodales efficitur. Quisque dignissim blandit magna, vel venenatis turpis molestie sit amet. Pellentesque varius mauris vitae nibh malesuada pulvinar.<br>
+
+Vivamus lectus lacus, mattis vel leo fringilla, rhoncus laoreet ipsum. Quisque at diam in lorem dignissim commodo. Mauris dapibus luctus orci eget lacinia. Nam nunc libero, pulvinar sed nulla non, placerat semper nulla. In sed diam ut leo pellentesque consectetur. Aliquam consectetur, velit id gravida tempor, erat felis cursus risus, sit amet sollicitudin arcu diam nec erat. Ut euismod sollicitudin blandit. Aliquam porttitor, velit in lobortis semper, elit risus ultrices lorem, sed rutrum dolor justo a eros. Ut ullamcorper gravida turpis, id egestas libero sagittis eu. Aenean sed rutrum urna. In lorem dui, scelerisque sed commodo eget, accumsan ut eros. Duis luctus leo vel massa vulputate lobortis. Ut consectetur augue nec lacus accumsan scelerisque. Praesent nulla nunc, gravida a rhoncus vel, vulputate eu quam. Proin ac massa at mi vehicula semper. Vestibulum tristique maximus ultrices.</p>
+
+<h5>9. RESPONSABILE DELLA PROTEZIONE DEI DATI</h5>
+<p>Il Titolare del trattamento non ha attualmente designato un Responsabile della Protezione dei Dati. In caso di variazioni, lo stesso procederà ad aggiornare la presente informativa.  </p>
+
+<h5>10. DIRITTI DEGLI INTERESSATI</h5>
+				<p>Etiam at tellus in metus dictum faucibus in in nibh. Nullam imperdiet ornare purus non mattis. Duis sit amet enim sed risus sollicitudin consectetur. Cras ultricies vitae nisl eget suscipit. Integer orci libero, scelerisque non venenatis eget, consequat id ex. Curabitur congue eleifend neque, pellentesque volutpat ante accumsan sed. Donec viverra id metus vel tristique. Vivamus ultrices ante purus, nec dapibus nisi finibus vitae. Pellentesque dictum convallis lacus, vitae vestibulum sem blandit in. Donec sit amet suscipit ex. Quisque sit amet magna leo. In commodo id massa nec viverra. Fusce dolor nibh, mollis quis bibendum ut, eleifend sit amet erat. Quisque odio ex, tristique in faucibus et, auctor nec libero. Sed vel sem maximus, tincidunt quam non, eleifend elit.<br>
+
+				Nulla ornare dui eu nibh elementum suscipit. Ut vel dui aliquam, auctor leo eget, pretium ante. Etiam venenatis libero mi, ac ullamcorper tortor lacinia eget. Nulla semper justo eu consequat lacinia. Aenean id viverra diam, id eleifend justo. Sed sed nisi erat. Nullam et massa malesuada, interdum metus id, ullamcorper libero. Donec quis ante commodo justo volutpat commodo. Etiam sollicitudin vel arcu eu laoreet. Mauris tempus ultrices ex, non facilisis massa elementum a. Sed egestas nulla dolor, vitae condimentum arcu aliquam eget. Quisque finibus nunc laoreet eros pulvinar egestas non in urna. Proin hendrerit sapien eget sagittis finibus. Cras eleifend a massa efficitur blandit.</p>
+
+<h5>11. AGGIORNAMENTI ALLA “PRIVACY POLICY”</h5>
+				<p>In laoreet congue efficitur. Pellentesque faucibus nibh erat, at convallis turpis vehicula non. Sed sed ante feugiat, aliquam turpis at, auctor quam. Nullam commodo turpis vel nulla pharetra placerat. Integer varius nulla et purus pellentesque pretium nec a odio. Fusce sagittis consequat felis eget dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum blandit pellentesque est, non congue lacus dapibus ut. Pellentesque justo ex, pharetra a ante quis, ultrices porta purus. Sed rhoncus, odio ac pretium feugiat, odio ipsum ultrices quam, vel vestibulum tortor lectus non nibh. Nulla aliquam consectetur sodales. Fusce condimentum semper enim, non viverra tellus elementum at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas nec consectetur erat.</p>
+ 
+
+<p> ogni caso, invitiamo gli Utenti a segnalare eventuali difficoltà incontrate nel visualizzare questa Privacy Policy, al fine di poter, eventualmente, predisporre modalità alternative di informazione.  <br>
+
+
+	Ultimo aggiornamento: aprile 2020 </p>
+
+
+<h5>DIRITTI DELL’INTERESSATO - REG. UE 679/2016 (estratto)</h5>
+
+<p>Articolo 15<br>
+Diritto di accesso dell’interessato (C63, C64)<br>
+1. L’interessato ha il diritto di ottenere dal titolare del trattamento la conferma che sia o meno in corso un trattamento di dati personali che lo riguardano e in tal caso, di ottenere l’accesso ai dati personali e alle seguenti informazioni:<br>
+a) le finalità del trattamento;<br>
+b) le categorie di dati personali in questione;<br>
+c) i destinatari o le categorie di destinatari a cui i dati personali sono stati o saranno comunicati, in particolare se destinatari di paesi terzi o organizzazioni internazionali;<br>
+
+d) quando possibile, il periodo di conservazione dei dati personali previsto oppure, se non è possibile, i criteri utilizzati per determinare tale periodo;<br>
+e) l’esistenza del diritto dell'interessato di chiedere al titolare del trattamento la rettifica o la cancellazione dei dati personali o la limitazione del trattamento dei dati personali che lo riguardano o di opporsi al loro trattamento;<br>
+f) il diritto di proporre reclamo a un’autorità di controllo;<br>
+g) qualora i dati non siano raccolti presso l’interessato, tutte le informazioni disponibili sulla loro origine;<br>
+h) l’esistenza di un processo decisionale automatizzato, compresa la profilazione di cui all’articolo 22, paragrafi 1 e 4, e, almeno in tali casi, informazioni significative sulla logica utilizzata, nonché l’importanza e le conseguenze previste di tale trattamento per l’interessato. <br><br>    
+2.   Qualora i dati personali siano trasferiti a un paese terzo o a un’organizzazione internazionale, l’interessato ha il diritto di essere informato dell’esistenza di garanzie adeguate ai sensi dell’articolo 46 relative al trasferimento.<br><br>
+3.   Il titolare del trattamento fornisce una copia dei dati personali oggetto di trattamento. In caso di ulteriori copie richieste dall’interessato, il titolare del trattamento può addebitare un contributo spese ragionevole basato sui costi amministrativi. Se l’interessato presenta la richiesta mediante mezzi elettronici, e salvo indicazione diversa dell’interessato, le informazioni sono fornite in un formato elettronico di uso comune.<br><br>
+4.   Il diritto di ottenere una copia di cui al paragrafo 3 non deve ledere i diritti e le libertà altrui.</p>
+
+<p>Articolo 16<br>
+Diritto di rettifica (C65)<br>
+L’interessato ha il diritto di ottenere dal titolare del trattamento la rettifica dei dati personali inesatti che lo riguardano senza ingiustificato ritardo. Tenuto conto delle finalità del trattamento, l’interessato ha il diritto di ottenere l’integrazione dei dati personali incompleti, anche fornendo una dichiarazione integrativa.<br><br>
+
+Articolo 17<br>
+Diritto alla cancellazione («diritto all’oblio») (C65, C66)<br>
+1. L’interessato ha il diritto di ottenere dal titolare del trattamento la cancellazione dei dati personali che lo riguardano senza ingiustificato ritardo e il titolare del trattamento ha l’obbligo di cancellare senza ingiustificato ritardo i dati personali, se sussiste uno dei motivi seguenti:<br>
+a) i dati personali non sono più necessari rispetto alle finalità per le quali sono stati raccolti o altrimenti trattati;<br>
+b) l’interessato revoca il consenso su cui si basa il trattamento conformemente all'articolo 6, paragrafo 1, lettera a), o all’articolo 9, paragrafo 2, lettera a), e se non sussiste altro fondamento giuridico per il trattamento;<br>
+c) l’interessato si oppone al trattamento ai sensi dell’articolo 21, paragrafo 1, e non sussiste alcun motivo legittimo prevalente per procedere al trattamento, oppure si oppone al trattamento ai sensi dell’articolo 21, paragrafo 2; <br>
+d) i dati personali sono stati trattati illecitamente;<br>
+e) i dati personali devono essere cancellati per adempiere un obbligo legale previsto dal diritto dell’Unione o dello Stato membro cui è soggetto il titolare del trattamento;<br>
+f) i dati personali sono stati raccolti relativamente all’offerta di servizi della società dell’informazione di cui all’articolo 8, paragrafo 1.<br><br>
+2. Il titolare del trattamento, se ha reso pubblici dati personali ed è obbligato, ai sensi del paragrafo 1, a cancellarli, tenendo conto della tecnologia disponibile e dei costi di attuazione adotta le misure ragionevoli, anche tecniche, per informare i titolari del trattamento che stanno trattando i dati personali della richiesta dell’interessato di cancellare qualsiasi link, copia o riproduzione dei suoi dati personali.<br><br>
+3. I paragrafi 1 e 2 non si applicano nella misura in cui il trattamento sia necessario:<br>
+a) per l’esercizio del diritto alla libertà di espressione e di informazione;<br>
+b) per l’adempimento di un obbligo legale che richieda il trattamento previsto dal diritto dell’Unione o dello Stato membro cui è soggetto il titolare del trattamento o per l’esecuzione di un compito svolto nel pubblico interesse oppure nell’esercizio di pubblici poteri di cui è investito il titolare del trattamento;<br>
+c) per motivi di interesse pubblico nel settore della sanità pubblica in conformità dell’articolo 9, paragrafo 2, lettere h) e i) e dell’articolo 9, paragrafo 3;<br>
+d) a fini di archiviazione nel pubblico interesse, di ricerca scientifica o storica o a fini statistici conformemente all’articolo 89, paragrafo 1, nella misura in cui il diritto di cui al paragrafo 1 rischi di rendere impossibile o di pregiudicare gravemente il conseguimento degli obiettivi di tale trattamento; o<br>
+	e) per l’accertamento, l’esercizio o la difesa di un diritto in sede giudiziaria.<br></p>
+
+<p>Articolo 18<br>
+Diritto di limitazione di trattamento (C67)<br>
+1. L’interessato ha il diritto di ottenere dal titolare del trattamento la limitazione del trattamento quando ricorre una delle seguenti ipotesi:<br>
+a) l’interessato contesta l’esattezza dei dati personali, per il periodo necessario al titolare del trattamento per verificare l’esattezza di tali dati personali; <br>
+b) il trattamento è illecito e l’interessato si oppone alla cancellazione dei dati personali e chiede invece che ne sia limitato l’utilizzo;<br>
+c) benché il titolare del trattamento non ne abbia più bisogno ai fini del trattamento, i dati personali sono necessari all’interessato per l’accertamento, l’esercizio o la difesa di un diritto in sede giudiziaria;<br>
+d) l’interessato si è opposto al trattamento ai sensi dell’articolo 21, paragrafo 1, in attesa della verifica in merito all’eventuale prevalenza dei motivi legittimi del titolare del trattamento rispetto a quelli dell’interessato.<br><br>
+2. Se il trattamento è limitato a norma del paragrafo 1, tali dati personali sono trattati, salvo che per la conservazione, soltanto con il consenso dell’interessato o per l’accertamento, l’esercizio o la difesa di un diritto in sede giudiziaria oppure per tutelare i diritti di un’altra persona fisica o giuridica o per motivi di interesse pubblico rilevante dell’Unione o di uno Stato membro.<br><br>
+3. L’interessato che ha ottenuto la limitazione del trattamento a norma del paragrafo 1 è informato dal titolare del trattamento prima che detta limitazione sia revocata.<br><br>
+
+Articolo 19<br>
+Obbligo di notifica in caso di rettifica o cancellazione dei dati personali o limitazione del trattamento (C31)<br>
+Il titolare del trattamento comunica a ciascuno dei destinatari cui sono stati trasmessi i dati personali le eventuali rettifiche o cancellazioni o limitazioni del trattamento effettuate a norma dell’articolo 16, dell’articolo 17, paragrafo 1 e dell’articolo 18, salvo che ciò si riveli impossibile o implichi uno sforzo sproporzionato. Il titolare del trattamento comunica all’interessato tali destinatari qualora l’interessato lo richieda.<br><br>
+
+Articolo 20<br>
+Diritto alla portabilità dei dati (C68)<br>
+1. L’interessato ha il diritto di ricevere in un formato strutturato, di uso comune e leggibile da dispositivo automatico i dati personali che lo riguardano forniti a un titolare del trattamento e ha il diritto di trasmettere tali dati a un altro titolare del trattamento senza impedimenti da parte del titolare del trattamento cui li ha forniti qualora:<br>
+a) il trattamento si basi sul consenso ai sensi dell’articolo 6, paragrafo 1, lettera a) o dell’articolo 9, paragrafo 2, lettera a) o su un contratto ai sensi dell’articolo 6, paragrafo 1, lettera b); e<br>
+b) il trattamento sia effettuato con mezzi automatizzati.<br><br>
+2. Nell’esercitare i propri diritti relativamente alla portabilità dei dati a norma del paragrafo 1, l’interessato ha il diritto di ottenere la trasmissione diretta dei dati personali da un titolare del trattamento all’altro, se tecnicamente fattibile.<br>
+3. L’esercizio del diritto di cui al paragrafo 1 del presente articolo lascia impregiudicato l’articolo 17. Tale diritto non si applica al trattamento necessario per l’esecuzione di un compito di interesse pubblico o connesso all’esercizio di pubblici poteri di cui è investito il titolare del trattamento.<br>
+4. Il diritto di cui al paragrafo 1 non deve ledere i diritti e le libertà altrui.<br><br>
+
+Articolo 21<br>
+Diritto di opposizione (C69, C70)<br>
+1. L’interessato ha il diritto di opporsi in qualsiasi momento, per motivi connessi alla sua situazione particolare, al trattamento dei dati personali che lo riguardano ai sensi dell’articolo 6, paragrafo 1, lettere e) o f), compresa la profilazione sulla base di tali disposizioni. Il titolare del trattamento si astiene dal trattare ulteriormente i dati personali salvo che egli dimostri l’esistenza di motivi legittimi cogenti per procedere al trattamento che prevalgono sugli interessi, sui diritti e sulle libertà dell’interessato oppure per l’accertamento, l’esercizio o la difesa di un diritto in sede giudiziaria.
+2. Qualora i dati personali siano trattati per finalità di marketing diretto, l’interessato ha il diritto di opporsi in qualsiasi momento al trattamento dei dati personali che lo riguardano effettuato per tali finalità, compresa la profilazione nella misura in cui sia connessa a tale marketing diretto.<br>
+3. Qualora l’interessato si opponga al trattamento per finalità di marketing diretto, i dati personali non sono più oggetto di trattamento per tali finalità.
+4. Il diritto di cui ai paragrafi 1 e 2 è esplicitamente portato all’attenzione dell’interessato ed è presentato chiaramente e separatamente da qualsiasi altra informazione al più tardi al momento della prima comunicazione con l’interessato.<br>
+5. Nel contesto dell’utilizzo di servizi della società dell’informazione e fatta salva la direttiva 2002/58/CE, l’interessato può esercitare il proprio diritto di opposizione con mezzi automatizzati che utilizzano specifiche tecniche.<br>
+6. Qualora i dati personali siano trattati a fini di ricerca scientifica o storica o a fini statistici a norma dell’articolo 89, paragrafo 1, l’interessato, per motivi connessi alla sua situazione particolare, ha il diritto di opporsi al trattamento di dati personali che lo riguarda, salvo se il trattamento è necessario per l’esecuzione di un compito di interesse pubblico.<br><br>
+
+Articolo 22<br>
+Processo decisionale automatizzato relativo alle persone fisiche, compresa la profilazione (C71, C72)<br>
+1. L’interessato ha il diritto di non essere sottoposto a una decisione basata unicamente sul trattamento automatizzato, compresa la profilazione, che produca effetti giuridici che lo riguardano o che incida in modo analogo significativamente sulla sua persona.<br><br>
+2. Il paragrafo 1 non si applica nel caso in cui la decisione:<br>
+a) sia necessaria per la conclusione o l’esecuzione di un contratto tra l’interessato e un titolare del trattamento;<br>
+b) sia autorizzata dal diritto dell’Unione o dello Stato membro cui è soggetto il titolare del trattamento, che precisa altresì misure adeguate a tutela dei diritti, delle libertà e dei legittimi interessi dell’interessato;<br>
+c) si basi sul consenso esplicito dell’interessato.<br><br>
+3. Nei casi di cui al paragrafo 2, lettere a) e c), il titolare del trattamento attua misure appropriate per tutelare i diritti, le libertà e i legittimi interessi dell’interessato, almeno il diritto di ottenere l’intervento umano da parte del titolare del trattamento, di esprimere la propria opinione e di contestare la decisione.<br><br>
+4. Le decisioni di cui al paragrafo 2 non si basano sulle categorie particolari di dati personali di cui all’articolo 9, paragrafo 1, a meno che non sia d’applicazione l’articolo 9, paragrafo 2, lettere a) o g) e non siano in vigore misure adeguate a tutela dei diritti, delle libertà e dei legittimi interessi dell’interessato.<br><br>
+
+Articolo 34<br>
+Comunicazione di una violazione dei dati personali all’interessato (C68-C88)<br>
+1. Quando la violazione dei dati personali è suscettibile di presentare un rischio elevato per i diritti e le libertà delle persone fisiche, il titolare del trattamento comunica la violazione all’interessato senza ingiustificato ritardo.<br><br>
+2. La comunicazione all’interessato di cui al paragrafo 1 del presente articolo descrive con un linguaggio semplice e chiaro la natura della violazione dei dati personali e contiene almeno le informazioni e le misure di cui all’articolo 33, paragrafo 3, lettere b), c) e d).<br><br>
+3. Non è richiesta la comunicazione all’interessato di cui al paragrafo 1 se è soddisfatta una delle seguenti condizioni:<br>
+a) il titolare del trattamento ha messo in atto le misure tecniche e organizzative adeguate di protezione e tali misure erano state applicate ai dati personali oggetto della violazione, in particolare quelle destinate a rendere i dati personali incomprensibili a chiunque non sia autorizzato ad accedervi, quali la cifratura;<br>
+b) il titolare del trattamento ha successivamente adottato misure atte a scongiurare il sopraggiungere di un rischio elevato per i diritti e libertà degli interessati di cui al paragrafo 1; <br>
+c) detta comunicazione richiederebbe sforzi sproporzionati. In tal caso, si procede invece a una comunicazione pubblica o a una misura simile, tramite la quale gli interessati sono informati con analoga efficacia. <br><br>
+4. Nel caso in cui il titolare del trattamento non abbia ancora comunicato all’interessato la violazione dei dati personali, l’autorità di controllo può richiedere, dopo aver valutato la probabilità che la violazione dei dati personali presenti un rischio elevato, che vi provveda o può decidere che una delle condizioni di cui al paragrafo 3 è soddisfatta.<br><br><br>
+
+Per l’esercizio dei suddetti diritti, può contattare il Titolare del trattamento all’indirizzo privacy@sognounavacanza.com  </p>
+
+		  
+			</div>
+			</div>
+		</div>
+	  
+	  </section>
+	  
+   
+
+
+
+
+    <footer class="ftco-footer bg-bottom" style="background-image: url(images/footer-bg.jpg);">
+		<button onclick="topFunction()" id="myBtn" title="Go to top"><span class="icon-chevron-circle-up"></span></button>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Sogno una<img src="images/pwa-logo-50x50.png" alt="" width="40px">Vacanza</h2>
+              <p>Sogno una Vacanza è una delle migliori agenzie di viaggi in Italia. Lavoriamo ogni giorno per proporti programmi di viaggio originali e per selezionare le vacanze più vantaggiose al giusto prezzo. </p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                  <li class="ftco-animate"><a href="https://www.twitter.com/"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+               <h2 class="ftco-heading-2">Informazioni</h2>
+              <ul class="list-unstyled">
+			    <li><a href="#" class="py-2 d-block">Richiedi preventivo</a></li>
+                <li><a href="images/Condizioni generali.pdf" class="py-2 d-block">Condizioni generali di vendita</a></li>
+                <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+                <li><a href="#" class="py-2 d-block">Cookie Policy</a></li>
+                <li><a href="images/Informativa e consenso.pdf" class="py-2 d-block">Informativa e consenso</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+               <h2 class="ftco-heading-2">Tour</h2>
+              <ul class="list-unstyled">
+                <li><a href="europa.html" class="py-2 d-block">Europa</a></li>
+                <li><a href="africa.html" class="py-2 d-block">Africa</a></li>
+                <li><a href="nord_america.html" class="py-2 d-block">Nord America</a></li>
+                <li><a href="centro_america_caraibi.html" class="py-2 d-block">Centro America e Caraibi</a></li>
+                <li><a href="medio_oriente.html" class="py-2 d-block">Medio Oriente</a></li>
+                <li><a href="estremo_oriente.html" class="py-2 d-block">Estremo Oriente</a></li>
+				 <li><a href="oceania.html" class="py-2 d-block">Oceania</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Hai bisogno di altre informazioni?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><a href="#"><span class="icon icon-map-marker"></span><span class="text">Via Dei Sogni, 10 - 00110 Roma</span></a></li>
+	                   <li><a href="tel:+390123456789"><span class="icon icon-phone"></span><span class="text">+39 012 345 6789</span></a></li>
+	                <li><a href="mailto:info@sognounavacanza.com"><span class="icon icon-envelope"></span><span class="text"> info@sognounavacanza.com</span></a></li>
+	              </ul>
+	            </div>
+				<h2 class="ftco-heading-2">ORARI DI APERTURA</h2>
+<p>Dal Lunedì al Venerdì:
+09:00 - 12:00 e 16:00 - 19:30. <br>
+Il Sabato e per altri orari solo su appuntamento.<br>
+Domenica chiuso.</p>
+				
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script>All rights reserved | Sogno una Vacanza  <i class="icon-heart color-danger" aria-hidden="true"></i>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+ <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 30px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
+    
+
+	  
+	  
+	   <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 30px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+	  
+	  
+	  <!--MODAL-->
+	  
+ <script>
+		  (function ($) {
+    'use strict';
+
+    var form = $('.modulo'),
+        message = $('.modal_msg'),
+        form_data;
+
+    // Success function
+    function done_func(response) {
+        message.fadeIn().removeClass('alert-danger').addClass('alert-success');
+        message.text(response);
+        setTimeout(function () {
+            message.fadeOut();
+        }, 9000);
+        form.find('input:not([type="submit"]), textarea').val('');
+    }
+
+    // fail function
+    function fail_func(data) {
+        message.fadeIn().removeClass('alert-success').addClass('alert-danger');
+        message.text("Hai perso la connessione ad Internet. Riprova più tardi!");
+        setTimeout(function () {
+            message.fadeOut();
+        }, 7000);
+    }
+    
+    form.submit(function (e) {
+        e.preventDefault();
+        form_data = $(this).serialize();
+        $.ajax({
+            type: 'GET',
+            url: form.attr('action'),
+            data: form_data
+        })
+        .fail(fail_func)
+        .done(done_func);
+    });
+    
+})(jQuery);</script>  
+	  
+	  <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","corners":"small","colors":{"popup":{"background":"#33313b","text":"#ffffff","border":"#33313b"},"button":{"background":"#f9ab30","text":"#000000"}},"position":"bottom","fontsize":"tiny","content":{"href":"https://www.sognounavacanza.com/cookie-policy.html","button":"Chiudi","link":"Maggiori informazioni","message":"Questo sito utilizza cookie per migliorare l'esperienza dell'utente e la qualità dei servizi. Continuando la navigazione autorizzi le nostre modalità d'uso dei cookie. "}})});</script>
+	  
+  </body>
+</html>
